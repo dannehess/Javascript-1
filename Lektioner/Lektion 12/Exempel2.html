@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exempel 2</title>
+
+        <style>
+        
+        .nice
+        {
+            color: green;
+        }
+        
+        
+        </style>
+</head>
+<body>
+    
+    <h1>Rubrik</h1>
+    <h1>Exempel 2</h1>
+    <h1>Exempel 2</h1>
+    <h1>Exempel 2</h1>
+    <h1>Exempel 2</h1>
+ 
+<script>
+
+
+
+//Hämta alla tal    
+let allH1 = document.getElementsByTagName('h1');
+console.log(allH1);
+
+//Lägg till klassen nice
+let firstH1 = allH1[0];
+
+firstH1.className = 'nice';
+
+//Koppla klassen nice till den sista rubriken
+console.log(firstH1);
+
+//Hämta sista elementet och koppla klassen
+allH1[allH1.length-1].className = 'nice';
+
+let h1 = document.getElementsByTagName('h1');
+
+
+
+
+
+
+
+
+
+    
+/*
+Det finns flera rubriker (h1) i e3 HTML-dokument.
+• Leta e=er den första rubriken
+och lägg Dll Dll CSS-klassen nice.
+• OBS!
+Det finns inget id på den första rubriken */
+
+</script>
+
+</body>
+</html>

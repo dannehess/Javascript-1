@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    
+    /* Skapa en CSS-klass (OBS! En punkt före en CSS-klass*/
+    .cool{
+        color: white;
+        background-color: black;
+        margin: auto auto auto auto;
+        font-size: 20px;
+        padding: 20px;
+        width: 450px;
+    }
+
+        .nice
+        {
+        color: pink;
+        margin: auto auto auto auto;
+        font-size: 50px;
+        padding: 20px;
+        text-align: center;
+        }
+    
+    
+    </style>
+
+</head>
+<body>
+
+
+    <h1 id = "one">Rubrik</h1>
+    <p>Stycke 1</p>
+    <p>Stycke 2</p>
+    <p>Stycke 3</p>
+    <h1 id = "two">Rubrik2</h1>
+
+
+<script>
+
+    
+
+
+
+    let two = document.getElementById('two');
+    two.className = 'nice';
+
+    //Ändra bakgrundsfärg
+    document.body.style.backgroundColor = 'maroon';
+
+    //Hämta alla p-element
+    let p = document.getElementsByTagName('p');
+
+    //Skriv ut innehållet av alla p i console
+    console.log(p); //Returnerar en HTMLCollection
+    for(let i = 0; i < p.length; i++)
+    {
+        console.log(p[i].innerHTML);
+       // p[i].style.color='blue'; //Sämsta sättet
+        p[i].className = 'cool';
+    }
+
+
+    //Vad är body
+    console.log(document.body);
+    //Body är en egenskap som returnerar elementet body
+    //Och alla barn som finns i body
+
+    //Hämta ett element med id=one
+    let h = document.getElementById('one');
+    //Ändra färg med egenskapen style
+    h.style.color = 'green';
+    //Ändra textstorlek
+    h.style.fontSize = '100px';
+    //Ändra till versaler
+    h.style.textTransform = 'uppercase';
+    //Ändra till gemener
+    //h.style.textTransform = 'lowercase';
+    //Lägg till understreck
+    h.style.textDecoration = 'underline';
+    //Centrera text
+    h.style.textAlign = 'center';
+    //Dölj element
+    //h.style.display = 'none';
+
+    
+    
+    
+
+
+/*
+    let h = document.getElementById('h');
+    //h.innerText = "TEST";
+    let b = h.innerHTML;
+    //Ändra text till versaler
+    b = b.toUpperCase();    //Är string JS mutable/inmutable
+    //Skicka den nya texten till elementet
+    h.innerHTML = b;
+
+    */
+
+    //Snyggare källkod
+    //h.innerHTML = h.innerHTML.toUpperCase();
+
+//    <h1 id ="one">Rubrik</h1>
+//<p id = "demo">Lite text och annat</p>
+
+/*
+
+let h = document.getElementById('one');
+//OBS Case sensitive. Det står fel i dokumentationen.
+console.log(h);
+//Vi får en referens till hela elementet
+//<h1 id = "one"> Exempel 1</h1>
+
+//Ändra innehåll
+let p = document.getElementById('demo');
+//Ändra text
+p.innerText = "TEST";
+//Ändra HTML
+p.innerHTML = "<b>Lite fet text</b>";
+//Lite fet text
+
+h = document.getElementById("FEL");
+console.log(h);
+//Om elementet saknas (felaktig ID)
+//null returneras
+
+if(h == null)
+{
+    console.log("Elementet saknas");
+}
+else
+{
+    console.log("Det finns ett element med ett id=FEL");
+}
+
+*/
+
+
+
+</script>
+
+</body>
+</html>

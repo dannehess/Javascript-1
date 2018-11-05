@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exempel 2</title>
+</head>
+
+<body>
+
+        <h1>Exempel 2</h1>
+
+        <p>
+            USERNAME:
+            <input type="text" id="username">
+        </p>
+        <p id="feedbackUser"></p>
+            
+
+        <p>
+            PASSWORD:
+            <input type="password" id="password">
+        </p>
+        <p id="feedbackPass"></p>
+    
+        <button>LOGIN</button>
+    
+
+    
+    <script>
+    
+    let elUser = document.getElementById('username');
+    let elPass = document.getElementById('password');
+    let elMsgUser = document.getElementById('feedbackUser');
+    let elMsgPass = document.getElementById('feedbackPass');
+       
+        elUser.oninput = checkUsername;
+        elPass.oninput = checkPassword;
+    
+        function checkUsername()
+        {
+            let elMsg = document.getElementById('feedbackUser');
+            elMsg.innerHTML = elUser.value.length<5? "Ange minst 5 teckennnnn" : "";
+            elMsg.style.color = "red";
+        }
+        
+        function checkPassword()
+        {
+            let elMsg = document.getElementById('feedbackPass');
+            elMsg.innerHTML = elPass.value.length<8? "Ange minst 8 tecken" : "";
+            elMsg.style.color = "red";
+        }
+
+
+    </script>
+    
+</body>
+</html>

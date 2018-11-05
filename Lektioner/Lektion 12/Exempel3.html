@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 3</title>
+    <style>
+    
+    .cool
+    {
+        font-size: 10px;
+        color: hotpink;
+    }
+    
+    
+    </style>
+</head>
+<body>
+
+        <p>stycke 1</p>
+        <p>stycke 2</p>
+        <p>stycke 3</p>
+
+
+<script>
+
+    /*
+
+<h1 id="one">Exempel 3</h1>
+<h1>Rubrik 1</h1>
+<h1>Rubrik 2</h1>
+<h1>Rubrik 3</h1>
+<p>Metoderna querySelector() och querySelectorAll()</p>
+
+
+let h1 = document.querySelector('#one');
+//Används istället för getElemenById
+    h1.style.color = 'green';
+    console.log(h1);
+
+let allH1 = document.querySelectorAll('h1');
+//Används istället för getElementsByTagName
+console.log(allH1);
+//querySelectorAll returnerar en Nodelist
+//getElementsByTagName returnerar en HTML-collection
+
+
+//Vi får iterera över en Nodelist
+for(let i = 0; i < allH1.length; i++)
+{
+    console.log(allH1[i].innerHTML);
+}
+
+*/
+
+/*
+
+<p>stycke 1</p>
+<p>stycke 2</p>
+<p>stycke 3</p>
+• Skapa ett skript som går igenom alla stycken i ett dokument.
+• Du ska undersöka om varje stycke avslutas med en punkt.
+• Om inte så ska skriptet lägga till en punkt.
+
+*/
+/*
+
+//Hämta alla p-element
+let p = document.getElementsByTagName('p');
+
+//Iterera över en HTML-collection
+for(let i = 0; i < p.length; i++)
+{
+    //Hämta innehållet
+    let s = p[i].innerHTML;
+    //Undersöka om varje stycke avslutas med en punkt
+    if(s[s.length-1] !== '.')
+    {
+        //Om inte ska scriptet lägga till en punkt
+        s += '.';
+    }
+        p[i].innerHTML = s; 
+}
+*/
+
+//Hämta alla p-element
+let p = document.getElementsByTagName('p');
+for(let i=0; i < p.length; i++)
+{
+    //Hämta innehållet
+    let s = p[i].innerHTML;
+    //Anropa funktionen capitalize
+    s = capitalize(s);
+    //Lägg till en punkt om punkt saknas
+    s = addDotToEndOfString();
+    //Uppdatera DOM-trädet
+    p[i].innerHTML = s; 
+
+    p[i].className = 'cool';
+
+    // p[i].innerHTML = capitalize(p[i].innerHTML);
+
+    console.log(s);
+}
+
+function capitalize(s)
+{
+    //Ändra den första bokstaven till versal
+    return s.charAt(0).toUpperCase() + s.substring(1); //Första tecknet lagras
+}
+
+function addDotToEndOfString(s)
+{
+    if(s[s.length-1] !== '.')
+    {
+    return s += '.';
+}  
+    return s;
+}
+
+
+
+/*
+Skapa ett skript som går igenom alla stycken i ett dokument.
+• Du ska se till att alla stycken påbörjas med en stor bokstav.
+*/
+
+/*
+
+
+let p = document.getElementsByTagName('p');
+
+for(let i = 0; i < p; i++)
+{
+    let pp = p[i].innerHTML;
+    p.toUpperCase();
+}
+
+
+
+
+/*
+for(let i = 0; i < a.length; i++)
+{
+    if(a[i] != '.');
+    a.push('.');
+}
+
+console.log();
+
+*/
+
+</script>
+
+</body>
+</html>

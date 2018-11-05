@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Exempel 2</title>
+        <meta charset="UTF-8">
+    </head>
+
+<body>
+
+    <h1>Exempel 2</h1>
+
+    <script>
+
+
+        //Deklarera variabler
+        var namn1;
+        let namn2;
+
+        //Tilldela 
+        namn1 = "Daniel";
+        namn2 = "Kalle";
+
+        //Initiera (deklarera och tilldela)
+        let namn5 = "Kajsa";
+
+        //Initiera flera variabler
+        let firstName   = "Daniel",
+            lastName    = "Hessling",
+            age         = 29,
+            mobile      = "070-123123123";
+
+        fru = "Lynn";       //En automatisk initiering av en variabel
+                            //OBS! Inte bra!
+
+        fru = namn5;        //Vi kopierar "Kajsa" in i variabeln fru
+
+
+        console.log(namn5);
+        console.log(fru);
+        // console.log(barn);  //ReferenceError (variabeln finns inte)
+
+                //"use strict"; "Strict Mode" hindrar dig från att använda odeklarerade variabler
+                //Variabelnamn måste börja med en bokstav, $ eller _
+                //Stora bokstäver används i konstanter "Const"
+
+        const MAX_VALUE = 10;
+                //MAX_VALUE = 20; //FEL. Vi får inte ändra konstanter
+        console.log(MAX_VALUE);
+
+        //let 123; //Vi får inte påbörja med siffor, minustecken/bindestreck (Används endast som minustecken) eller punkt
+                //Variabelnamn får innehålla siffror men inte börja med en siffra
+        
+        // let let; /FEL
+        // var var; /FEL
+
+        document.write(firstName + " " + lastName + " ");
+
+        //Ny metod, mellanslag mellan strängar "   `string text ${expression} string text`   "
+
+        var namnet;
+        namnet = "DANIEL";
+        document.write(namn.length);
+
+    </script>
+
+</body>
+</html>

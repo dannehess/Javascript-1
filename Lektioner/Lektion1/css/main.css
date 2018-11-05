@@ -1,0 +1,58 @@
+body
+{
+background-color: #DCDCDC;
+}
+
+h1
+{
+color: white;
+Font-size: 4vw;
+text-align: center;
+}
+
+p
+{
+color: white;
+text-align: left;
+Font-family: Verdana;
+Padding-left: 60px;
+}
+
+A:link
+{
+color: green;
+Text-decoration: underline;
+}
+
+A:hover
+{
+Color: #FFFFFF;
+Text-decoration: none;
+}
+
+main
+{
+Background-color: #333333;
+Width: 400px;
+
+Border: 10px solid; color: #FFFFFF;
+Margin-left: auto;
+Margin-right: auto;
+Margin-top: 50px;
+Padding: 20px;
+}
+
+.send
+{
+    border: 0px;
+    padding: 0px;
+    background: #333333;
+    font-size: 20px;
+    text-decoration: bold; color: #FFFFFF;
+}
+
+.form
+{
+    border: 4px solid; color: #FFFFFF;
+}
+
